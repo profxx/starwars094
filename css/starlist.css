@@ -1,0 +1,32 @@
+.starlist{
+    list-style: none;
+    padding: 0;
+}
+.character{
+    background-color: gray;
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 1rem;
+}
+.character .name{
+    font-family: 'SF Distant Galaxy', sans-serif;
+    font-size: 32px;
+}
+.character .detail{
+    display: flex;
+}
+.character .description{
+    border: black 1px solid;
+    padding: 2rem;
+}
+.character img{
+    width: 300px;
+}
+@media screen and (max-width: 500px){
+    .character .detail{
+        flex-direction: column-reverse;
+    }
+    .character img{
+        width: 100%;
+    }    
+}
