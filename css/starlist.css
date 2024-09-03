@@ -30,4 +30,7 @@
     .character img{
         width: 100%;
     }    
+    .character .description{
+        width: 100%;
+    }
 }
