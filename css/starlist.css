@@ -18,9 +18,10 @@
 .character .description{
     border: black 1px solid;
     padding: 2rem;
+    width: 70%;
 }
 .character img{
-    width: 300px;
+    width: 30%;
 }
 @media screen and (max-width: 500px){
     .character .detail{

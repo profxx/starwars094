@@ -1,4 +1,6 @@
-const url = `https://starwars-databank-server.vercel.app/api/v1/characters?page=1&limit=100`;
+const limit = 10;
+const page = 10;
+const url = `https://starwars-databank-server.vercel.app/api/v1/characters?page=${page}&limit=${limit}`;
 const starlistOL = document.getElementById("starlist")
 
 function convertCharacterToLi(character){
@@ -16,12 +18,9 @@ function convertCharacterToLi(character){
 fetch(url)
     .then((response) => response.json())
     .then((json) => json.data)
-    .then((starlist) => {
-        for (let i = 0; i < starlist.length; i++){
-            const character = starlist[i];
-            starlistOL.innerHTML += convertCharacterToLi(character);
-        }
-    })
+    .then((starlist) => 
+        starlistOL.innerHTML = 
+        starlist.map(convertCharacterToLi).join(""))
     .catch((error) => console.log(error));
 
     
